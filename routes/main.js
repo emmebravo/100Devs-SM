@@ -16,6 +16,7 @@ router.post('/signup', authController.postSignup)
 
 module.exports = router
 
+
 /* This is what I need to integrate:
 I have temporarily abandoned this idea because it was beciming a time suck (and Leon didn't do it), but we can come back to it if we want each page to have its own <title>
 

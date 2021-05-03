@@ -3,9 +3,11 @@
   <%- include('partials/navbar') %>
   <div class="container grid">
     <h1><%=user.userName%>'s Profile</h1>
-    <form method="POST" action="posts/createPost">
+    <form method="POST" enctype="multipart/form-data" action="posts/createPost">
       <input type="text" id="title" name="title">
       <input type="textarea" id="caption" name="caption">
+      <label for="imgUpload" class="form-label">Image</label>
+                <input type="file" class="form-control" id="imageUpload" name="file">
       <button type="submit" value="submit">Submit</button>
     </form>
     <h2>Posts</h2>

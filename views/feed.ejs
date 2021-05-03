@@ -1,13 +1,11 @@
 <%- include('partials/header') -%>
 <body>
+<%- include('partials/navbar') %>
   <div class="container">
-    <body>
-    <%- include('partials/navbar') %>
     <h1>It's me, the feed page!</h1>
     <% for (let i = 0; i < posts.length; i++) {%>
       <a href="/posts/<%=posts[i]._id%>"><li><%= posts[i].title%></li></a>
     <% } %>
-</body>
   </div>
 </body>
 </html>

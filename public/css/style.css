@@ -91,3 +91,36 @@ h1 {
   padding: 3px;
   font-size: 16px;
 }
+
+/* navbar styling */
+.menu {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  row-gap: 2em;
+  background-color: blue;
+  padding: 0.75em 2em;
+}
+
+.menu li a {
+  color: white;
+  text-decoration: none;
+  background-color: blue;
+  padding: 0.75em;
+}
+
+.menu li:hover a:hover {
+  background-color: #0e0e6b;
+}
+
+#logo {
+  font-weight: bold;
+  color: red;
+  background-color: skyblue;
+  border: 2px solid #fff;
+  border-radius: 5px;
+  margin-right: auto;
+  padding: 0 0.75em;
+  order: 0;
+}

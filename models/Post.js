@@ -24,6 +24,14 @@ const PostSchema = new mongoose.Schema({
   user: {
     type: String,
     required: true
+  },
+  cloudinaryId: {
+    type: String,
+    require: true,
+  },
+  image: {
+    type: String,
+    require: true,
   }
 })
 

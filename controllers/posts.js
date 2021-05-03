@@ -1,4 +1,5 @@
 const Post = require ('../models/Post')
+const cloudinary = require("../middleware/cloudinary");
 
 module.exports = {
   getPost: async (request, response) => {
@@ -11,7 +12,16 @@ module.exports = {
   },
   createPost: async (request, response) => {
     try{
-        await Post.create({userId: request.user.id, title: request.body.title, caption: request.body.caption, user: request.user.userName})
+        const result = await cloudinary.uploader.upload(request.file.path);
+        
+        await Post.create({
+          userId: request.user.id,
+          title: request.body.title,
+          caption: request.body.caption,
+          user: request.user.userName,
+          image: result.secure_url,
+          cloudinaryId: result.public_id
+        })
         console.log('Post has been added!')
         response.redirect('/profile')
     }catch(error){
@@ -58,6 +68,7 @@ module.exports = {
         await Post.deleteOne({
           _id: request.params.id
         })
+        await cloudinary.uploader.destroy(post.cloudinaryId);
         console.log('Post Removed')
         response.redirect('/profile')
       }
