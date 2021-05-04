@@ -21,6 +21,8 @@ body {
 
 h1 {
   text-align: center;
+  line-height: 1.2;
+  padding-bottom: 10px;
 }
 
 a {
@@ -63,10 +65,25 @@ h1 {
   padding: 0 40px;
 }
 
+.main {
+  margin-top: 40px;
+}
+
 .navbar {
   background-color: var(--darkblue-color);
-  color: var(--cream-color);
-  height: 70px;
+  color: var(--pink-color);
+  height: 100%;
+}
+
+.navbar .container,
+.navbar .container h1,
+.navbar .container li,
+.navbar .container a {
+  background-color: var(--darkblue-color);
+}
+
+.navbar h1 {
+  padding-bottom: 30px;
 }
 
 .navbar ul {
@@ -80,7 +97,9 @@ h1 {
 }
 
 .navbar a:hover {
-  color: var(--darkgreen-color);
+  color: var(--cream-color);
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.3);
 }
 
 .navbar .flex {
@@ -122,8 +141,13 @@ h1 {
 .form-control input[type='email'],
 .form-control input[type='password'] {
   border: 0;
-  border-bottom: 1px solid var(--cream-color);
+  border-bottom: 2px solid var(--darkgreen-color);
   width: 100%;
   padding: 3px;
   font-size: 16px;
+}
+
+.profile .form-control input[type='text'],
+.profile .form-control input[type='textarea'],
+.profile .form-control input[type=''] {
 }
