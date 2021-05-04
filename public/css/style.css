@@ -59,7 +59,7 @@ h1 {
 }
 
 .container {
-  max-width: 1100px;
+  max-width: 1200px;
   margin: 0 auto;
   overflow: auto;
   padding: 0 40px;
@@ -133,8 +133,12 @@ h1 {
   outline: none;
 }
 
-.container .grid > *:first-child {
+.container .lone .grid > *:first-child {
   grid-column: 1 / span 2;
+}
+
+.profile .grid {
+  align-items: flex-start;
 }
 
 .form-control input[type='text'],
@@ -147,7 +151,19 @@ h1 {
   font-size: 16px;
 }
 
+.profile .form-control textarea#styled {
+  height: 200px;
+}
+
 .profile .form-control input[type='text'],
-.profile .form-control input[type='textarea'],
-.profile .form-control input[type=''] {
+.profile .form-control input[type='textarea'] {
+  border: 0;
+  border-bottom: 2px solid var(--darkgreen-color);
+  width: 95%;
+  padding: 3px;
+  font-size: 16px;
+}
+
+.img-fluid img {
+  height: 100%;
 }

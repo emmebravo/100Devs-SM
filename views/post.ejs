@@ -20,15 +20,15 @@
     <p>Likes: <%= post.likes %></p>
     <p><%= post.caption %></p>
     <p>Created At: <%=post.date%></p>
+    <form action="/posts/likePost/<%= post.id %>" method="POST">
+      <button type="submit">Like</button>
+    </form>
     <% if (post.userId == user._id) {%>
       <form action="/posts/deletePost/<%= post.id %>"
         method="POST">
         <button type="submit">Delete</button>
       </form>
     <% } %>
-    <form action="/posts/likePost/<%= post.id %>" method="POST">
-      <button type="submit">Like</button>
-    </form>
   </div>
 </body>
 </html>
