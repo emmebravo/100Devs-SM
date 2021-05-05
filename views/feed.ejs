@@ -3,13 +3,13 @@
 <%- include('partials/navbar') %>
   <div class="main container">
     <h1>It's me, the feed page!</h1>
-    <div class="feed grid">
-      <ul>
+    <div class="feed">
+      <ul class="grid">
         <% for (let i = 0; i < posts.length; i++) {%>
-       <li><a href="/posts/<%=posts[i]._id%>"><img class="img-fluid" src="<%= posts[i].image%>"></a></li>
+       <li class="feed-item"><a href="/posts/<%=posts[i]._id%>"><img class="img-fluid" src="<%= posts[i].image%>"></a></li>
         <% } %>
       </ul>
     </div>
   </div>
 </body>
-</html>
+</html>>
