@@ -95,4 +95,12 @@ module.exports = {
       console.error(error);
     }
   },
+  getUserProfile: async (request, response) => {
+    try {
+      const userPosts = await Post.find({ userId: request.params.id }).sort({date: 'desc'})
+      response.render('user.ejs', {posts: userPosts, user: request.user})
+    } catch (error) {
+      console.error(error)
+    }
+  },
 };
